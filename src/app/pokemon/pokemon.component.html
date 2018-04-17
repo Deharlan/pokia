@@ -1,0 +1,52 @@
+<div id="pokemons">
+    <div id="pokemon" class="single">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a class="box-link" routerLink="/pokemons" routerLinkActive="active">Lista de todos os Pokémons</a>
+                </div>
+                <div class="item col-12 col-sm-10 col-lg-8 m-auto">
+                    <div class="box">
+                        <div class="id">
+                            #{{ this.pokemon.id }}
+                        </div>
+                        <div class="image">
+                            <img src="{{ this.pokemon.sprites.front_default }}">
+                        </div>
+                        <div class="name">
+                             {{ this.pokemon.name }}
+                        </div>
+                        <div class="weight">
+                            {{ this.pokemon.weight }} kg
+                        </div>
+                        <div class="types">
+                            <div class="title">
+                                Tipo
+                            </div>
+                            <div class="content">
+                                <div class="type" *ngFor="let type of this.pokemon.types" class="type {{ type.type.name }}">
+                                    {{ type.type.name }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="title">
+                                Status
+                            </div>
+                            <div class="content">
+                                <div *ngFor="let stat of this.pokemon.stats" class="stat">
+                                    <div class="stat-name">
+                                        {{ stat.stat.name }}
+                                    </div>
+                                    <div class="value">
+                                        {{ stat.base_stat }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
