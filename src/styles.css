@@ -12,6 +12,7 @@ html, body {
 #pokemons {
     padding-top: 700px;
     background: url('assets/bg.png') no-repeat top center;
+    animation: fade 2s;
 }
 
 #pokemon .item .box {
@@ -179,4 +180,197 @@ html, body {
 
 .text-center {
     text-align: center;
+}
+
+#loader {
+    background: #e03c1f;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#loader .content {
+    margin: 0 auto;
+}
+
+#loader .loading {
+    border: 4px dashed #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin: 0 auto;
+    animation: rolling 8s infinite;
+}
+
+#loader .loading .circle {
+    border: 4px outset #fff;
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    animation: rolling 3s infinite;
+    animation-direction: alternate;
+}
+
+/*
+#loader {
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#loader .position {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    left: 50%;
+    width: 1px;
+}
+
+#loader .pokeball {
+    position: absolute;
+    top: -75vw;
+    left: -75vw;
+    height: 150vw;
+    width: 150vw;
+    background: #000;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+#loader .pokeball .red {
+    position: absolute;
+    top: 0;
+    height: 48%;
+    width: 100%;
+    background: rgba(163,17,6,1);
+    background: -moz-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(163,17,6,1)), color-stop(100%, rgba(255,88,54,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: linear-gradient(135deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a31106', endColorstr='#ff5836', GradientType=1 );
+}
+
+#loader .pokeball .white {
+    position: absolute;
+    bottom: 0;
+    height: 48%;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(219,219,219,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb', GradientType=1 );
+}
+
+#loader .pokeball .ball-position {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+}
+
+#loader .pokeball .ball {
+    position: absolute;
+    top: -8vw;
+    left: -8vw;
+    height: 16vw;
+    width: 16vw;
+    border-radius: 100%;
+    border: 3vw solid #000;
+    background: #ffffff;
+    animation: ball 1.2s infinite;
+    transition: 0.8s all;
+} */
+
+
+#arrows .next a {
+    position: fixed;
+    top: 49%;
+    right: 30px;
+    z-index: 200;
+    background: rgba(163,17,6,1);
+    background: -moz-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(163,17,6,1)), color-stop(100%, rgba(255,88,54,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: linear-gradient(135deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a31106', endColorstr='#ff5836', GradientType=1 );
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 50px;
+    text-align: center;
+}
+
+#arrows .previous a {
+    position: fixed;
+    top: 49%;
+    left: 30px;
+    z-index: 200;
+    background: rgba(163,17,6,1);
+    background: -moz-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(163,17,6,1)), color-stop(100%, rgba(255,88,54,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    background: linear-gradient(135deg, rgba(163,17,6,1) 0%, rgba(255,88,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a31106', endColorstr='#ff5836', GradientType=1 );
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 50px;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ball {
+    0% {
+        background: #ffffff;
+    }
+    50% {
+        background: #ff1b05;
+    }
+    100% {
+        background: #ffffff;
+    }
+}
+
+@keyframes rolling {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }

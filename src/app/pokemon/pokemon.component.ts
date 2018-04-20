@@ -18,7 +18,7 @@ export class PokemonComponent implements OnInit {
         http: Http,
         private route: ActivatedRoute
     ) {
-        const id = +this.route.snapshot.paramMap.get('id');
+        const id = this.route.snapshot.paramMap.get('id');
 
         http.get('https://pokeapi.co/api/v2/pokemon/' + id)
         .map(res => res.json())

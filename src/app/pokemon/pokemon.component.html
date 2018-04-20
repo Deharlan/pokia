@@ -1,4 +1,27 @@
-<div id="pokemons">
+<div id="loader" *ngIf="!this.pokemon.id">
+    <div class="content">
+        <div class="image">
+            <img src="assets/logo-pokemon.png" alt="">
+        </div>
+        <div class="loading"></div>
+    </div>
+</div>
+<!-- <div id="loader" *ngIf="!this.pokemon.id">
+    <div class="position">
+        <div class="pokeball">
+            <div class="red">
+                <img src="assets/logo-pokemon.png" alt="">
+            </div>
+            <div class="ball-position">
+                <div class="ball"></div>
+            </div>
+            <div class="white">
+
+            </div>
+        </div>
+    </div>
+</div> -->
+<div id="pokemons" *ngIf="this.pokemon.id">
     <div id="pokemon" class="single">
         <div class="container">
             <div class="row">
